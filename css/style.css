@@ -37,6 +37,9 @@ body {
   font-weight: 700;
   color: hsl(0, 1%, 44%);
 }
+.calculator .form .container-input label.error-label {
+  color: hsl(0, 100%, 67%);
+}
 .calculator .form .container-input input {
   width: 89px;
   height: 53px;
@@ -47,6 +50,12 @@ body {
   padding-left: 1.7rem;
   font-weight: 800;
 }
+.calculator .form .container-input input::focus {
+  border: 1px solid hsl(259, 100%, 65%);
+}
+.calculator .form .container-input input.error-input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
 .calculator .form .container-btn {
   width: 100%;
   margin-top: 6.3rem;
@@ -55,7 +64,7 @@ body {
   justify-content: center;
   position: relative;
 }
-.calculator .form .container-btn div {
+.calculator .form .container-btn .btn-send {
   width: 65px;
   height: 65;
   border-radius: 50%;
@@ -67,6 +76,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.calculator .form .container-btn .btn-send:hover {
+  background-color: hsl(0, 0%, 8%);
 }
 .calculator ul {
   width: 100%;
@@ -84,6 +97,7 @@ body {
 
 /* --------------------------------- footer --------------------------------- */
 footer {
+  margin-top: 50px;
   font-size: 11px;
   text-align: center;
 }

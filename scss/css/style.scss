@@ -1,84 +1,96 @@
 @use "../var" as v;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
-
 
 body {
   background-color: map-get(v.$colors, "Light-grey");
   padding-inline: 1.7rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-
 /* ------------------------------- mode mobile ------------------------------ */
-.calculator{
+.calculator {
   width: 341px;
   height: 485px;
   margin-top: 8.6rem;
   background-color: map-get(v.$colors, "White");
   border-radius: 25px 25px 115px 25px;
 
-  .form{
-    padding: 5.2rem 2.2rem 0 ;
+  .form {
+    padding: 5.2rem 2.2rem 0;
 
-    .container-input{
-      width: 100%;     
+    .container-input {
+      width: 100%;
       display: flex;
       justify-content: space-evenly;
-      label{
+      label {
         font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.3rem;
         font-weight: 700;
-        color: map-get(v.$colors, "Smokey-grey" );
+        color: map-get(v.$colors, "Smokey-grey");
+
+        &.error-label{
+          color: map-get(v.$colors, "Light-red");
+        }
       }
 
-      input{
+      input {
         width: 89px;
         height: 53px;
         border-radius: 8px;
         border: 1px solid #ccc;
-        color: map-get(v.$colors, "Off-black" );
-        font-size: 1.6rem; 
+        color: map-get(v.$colors, "Off-black");
+        font-size: 1.6rem;
         padding-left: 1.7rem;
         font-weight: 800;
-        
+
+        &::focus{
+          border: 1px solid map-get(v.$colors, "Purple");
+        }
+
+        &.error-input{
+          border: 1px solid  map-get(v.$colors, "Light-red") ;
+        }
       }
+
     }
-    .container-btn{
+    .container-btn {
       width: 100%;
       margin-top: 6.3rem;
-      border-top: 2px solid map-get(v.$colors, "Light-grey" );
+      border-top: 2px solid map-get(v.$colors, "Light-grey");
       display: flex;
       justify-content: center;
       position: relative;
-      div{
+      .btn-send {
         width: 65px;
         height: 65;
         border-radius: 50%;
-        background-color: map-get(v.$colors, "Purple" );
+        background-color: map-get(v.$colors, "Purple");
         padding: 1.8rem;
-        position:absolute;
+        position: absolute;
         top: -30px;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          background-color: map-get(v.$colors, "Off-black");
+        }
       }
-           
-      
-      
     }
   }
-  ul{
+  ul {
     width: 100%;
     margin-top: 50px;
     font-size: 4.4rem;
@@ -87,27 +99,18 @@ body {
     color: map-get(v.$colors, "Off-black");
     list-style: none;
     border: 1px soli pink;
-    li{
-      span{
-        color: map-get(v.$colors, "Purple" )
+    li {
+      span {
+        color: map-get(v.$colors, "Purple");
       }
     }
   }
-
 }
-
-
-
-
-
-
-
-
-
 
 /* --------------------------------- footer --------------------------------- */
 
 footer {
+  margin-top: 50px;
   font-size: 11px;
   text-align: center;
 

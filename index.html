@@ -24,22 +24,27 @@
     <article class="calculator">
       <form action="#" id="calculatorForm" class="form" autocomplete="off">
         <div class="container-input">
-          <div class="item">
+          <div class="item" id="dayContent">
             <label for="fieldDay">Day</label><br>
-            <input type="text" id="fieldDay" name=" input day">
+            <input type="text" id="fieldDay" name="day">
+            <span class="error-massaje" id="day-error"></span>
+
           </div>
-          <div class="item">
+          <div class="item" id="monthContent">
             <label for="fieldMonth">Month</label> <br>
-            <input type="text" id="fielMonth" name=" input month">
+            <input type="text" id="fielMonth" name="month">
+            <span class="error-massaje" id="month-error"></span>
           </div>
-          <div class="item">
-            <label for="fieldYear">Year</label> <br>
-            <input type="text" id="fieldYear" name=" input year">
+          <div class="item" id="yearContent">
+            <label for="fieldYear" class="error-label">Year</label> <br>
+            <input type="text" id="fieldYear" name="past" class="error-input">
+            <span class="error-massaje" id="year-error"></span>
+
           </div>
 
         </div>
         <div class="container-btn">
-          <div class="">
+          <div class=" btn-send" id="btnSend">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 46 44">
               <g fill="none" stroke="#FFF" stroke-width="3">
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
@@ -50,18 +55,16 @@
 
       </form>
       <ul class="result">
-        <li class="result-year"><span>38</span> years</li>
-        <li class="result-month">
-          <spa></span> months
-        </li>
-        <li class="result-day"><span></span> days</li>
+        <li class="result-year"><span>--</span> years</li>
+        <li class="result-year"><span>--</span> months</li>
+        <li class="result-day"><span>--</span> days</li>
       </ul>
     </article>
   </main>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/cyeguez" target="_blank">Cesar Yeguez</a>.
   </footer>
 </body>
 
