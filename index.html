@@ -25,20 +25,20 @@
       <form action="#" id="calculatorForm" class="form" autocomplete="off">
         <div class="container-input">
           <div class="item" id="dayContent">
-            <label for="fieldDay">Day</label><br>
-            <input type="text" id="fieldDay" name="day">
-            <span class="error-massaje" id="day-error"></span>
+            <label for="fieldDay" id="labelDay">Day</label><br>
+            <input type="text" id="fieldDay" name="day" > <br>
+            <span class="error-massaje" id="dayError"></span>
 
           </div>
-          <div class="item" id="monthContent">
-            <label for="fieldMonth">Month</label> <br>
-            <input type="text" id="fielMonth" name="month">
-            <span class="error-massaje" id="month-error"></span>
+          <div class="item error" id="monthContent">
+            <label for="fieldMonth" id="labelMonth">Month</label> <br>
+            <input type="text" id="fieldMonth" name="month" ><br>
+            <span class="error-massaje" id="monthError"></span>
           </div>
           <div class="item" id="yearContent">
-            <label for="fieldYear" class="error-label">Year</label> <br>
-            <input type="text" id="fieldYear" name="past" class="error-input">
-            <span class="error-massaje" id="year-error"></span>
+            <label for="fieldYear" id="labelYear" >Year</label> <br>
+            <input type="text" id="fieldYear" name="past" ><br>
+            <span class="error-massaje" id="yearError"></span>
 
           </div>
 
@@ -55,9 +55,9 @@
 
       </form>
       <ul class="result">
-        <li class="result-year"><span>--</span> years</li>
-        <li class="result-year"><span>--</span> months</li>
-        <li class="result-day"><span>--</span> days</li>
+        <li class="result-year"><span id="placeYear">--</span> years</li>
+        <li class="result-year"><span id="placeMonth">--</span> months</li>
+        <li class="result-day"><span id="placeDay">--</span> days</li>
       </ul>
     </article>
   </main>
@@ -67,5 +67,7 @@
     Coded by <a href="https://github.com/cyeguez" target="_blank">Cesar Yeguez</a>.
   </footer>
 </body>
+
+<script src="./js/main.js"></script>
 
 </html>

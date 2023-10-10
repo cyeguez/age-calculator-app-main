@@ -49,12 +49,15 @@ body {
   font-size: 1.6rem;
   padding-left: 1.7rem;
   font-weight: 800;
-}
-.calculator .form .container-input input::focus {
-  border: 1px solid hsl(259, 100%, 65%);
+  outline-color: hsl(259, 100%, 65%);
 }
 .calculator .form .container-input input.error-input {
   border: 1px solid hsl(0, 100%, 67%);
+}
+.calculator .form .container-input .error-massaje {
+  font-size: 0.8rem;
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
 }
 .calculator .form .container-btn {
   width: 100%;
@@ -103,6 +106,25 @@ footer {
 }
 footer a {
   color: hsl(228, 45%, 44%);
+}
+
+/* ------------------------------ Mode Desktop ------------------------------ */
+@media screen and (min-width: 1440px) {
+  .calculator {
+    width: 844px;
+    height: 657px;
+    border-radius: 30px 30px 200px 30px;
+    margin: 168px auto;
+    padding: 60px;
+  }
+  .calculator .form .container-input input {
+    width: 160px;
+    height: 72px;
+    font-size: 3.2rem;
+  }
+  .calculator .form .container-btn .btn-send {
+    right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -31,6 +31,8 @@ body {
       width: 100%;
       display: flex;
       justify-content: space-evenly;
+
+      
       label {
         font-size: 1rem;
         text-transform: uppercase;
@@ -41,6 +43,9 @@ body {
         &.error-label{
           color: map-get(v.$colors, "Light-red");
         }
+
+
+        
       }
 
       input {
@@ -52,14 +57,20 @@ body {
         font-size: 1.6rem;
         padding-left: 1.7rem;
         font-weight: 800;
-
-        &::focus{
-          border: 1px solid map-get(v.$colors, "Purple");
-        }
-
+        outline-color: map-get(v.$colors, "Purple");
+        
         &.error-input{
-          border: 1px solid  map-get(v.$colors, "Light-red") ;
+          border: 1px solid map-get(v.$colors, "Light-red");
         }
+        
+
+        
+      }
+
+      .error-massaje{
+        font-size: 0.8rem;
+        color: map-get(v.$colors, "Light-red");
+        font-style: italic;
       }
 
     }
@@ -118,3 +129,38 @@ footer {
     color: hsl(228, 45%, 44%);
   }
 }
+
+
+/* ------------------------------ Mode Desktop ------------------------------ */
+
+  @media screen and (min-width:1440px) {
+    .calculator{
+      width: 844px;
+      height: 657px;
+      border-radius: 30px 30px 200px 30px;
+      margin: 168px auto;
+      padding: 60px;
+      
+      .form{
+        
+        .container-input{        
+          
+          
+          input{
+            width: 160px;
+            height: 72px;
+            font-size: 3.2rem;
+           
+          }
+        }
+
+        .container-btn {
+         
+          .btn-send {
+            right: 0;
+          }
+        }
+      }
+    }
+    
+  }
